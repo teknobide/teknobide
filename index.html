@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Servicio Técnico Informático de calidad y confianza" />
-    <title>El camino de la tecnologia - Servicio Tecnico Informático</title>
+    <meta name="description" content="Servicio Técnico Informático de calidad y confianza en Bilbao. Reparación de ordenadores, móviles, tablets y consolas. ¡Visítanos!">
+    <meta name="keywords" content="servicio técnico, reparación de ordenadores, Bilbao, TeknoBide, reparación de móviles, reparación de consolas">
+    <title>El camino de la tecnología - Servicio Técnico Informático</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -12,8 +13,8 @@
         body { background-color: #f5f5f5; color: #333333; text-align: center; }
         header { 
             background: #ffffff; 
-            padding: 15px; /* Reducido el padding */
-            font-size: 18px; /* Reducido el tamaño de la fuente */
+            padding: 15px; 
+            font-size: 18px; 
             font-weight: 600; 
             text-transform: uppercase; 
             letter-spacing: 1px; 
@@ -21,23 +22,23 @@
         }
         nav { 
             display: flex; 
-            justify-content: center; 
-            gap: 25px; 
+            justify-content: space-between; 
+            align-items: center; 
             padding: 15px; 
             background: #ffffff; 
             border-radius: 50px; 
             margin: 20px auto; 
-            width: fit-content; 
+            width: 90%; 
+            max-width: 1100px; 
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
             position: sticky; 
             top: 0; 
             z-index: 1000; 
-            align-items: center; /* Alineación de la imagen con los enlaces */
         }
         nav img { 
-            max-width: 120px;  /* Tamaño máximo de la imagen */
-            height: auto;  /* Mantiene la proporción de la imagen */
-            margin-right: 10px; /* Espacio entre la imagen y los enlaces */
+            max-width: 120px;  
+            height: auto;  
+            cursor: pointer; 
         }
         nav a { 
             text-decoration: none; 
@@ -50,9 +51,9 @@
         nav a:hover { color: #666666; text-decoration: underline; }
         .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
         section { 
-            padding: 60px; 
+            padding: 40px; 
             background: #ffffff; 
-            margin: 40px 0; 
+            margin: 20px 0; 
             border-radius: 15px; 
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
             text-align: left; 
@@ -72,7 +73,7 @@
         button { background: #666666; color: white; font-weight: 600; cursor: pointer; transition: 0.3s; }
         button:hover { background: #999999; }
         .logo { width: 400px; margin: 0 auto 20px; display: block; }
-        
+
         /* Animación en la sección de servicios */
         .service-card {
             background: #f5f5f5;
@@ -98,6 +99,108 @@
             100% { transform: scale(1); opacity: 1; }
         }
 
+        /* Estilos para el horario */
+        .business-hours {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        .business-hours td {
+            padding: 10px 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        .business-hours th {
+            background-color: #333333;
+            color: white;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+
+        /* Colores para abierto y cerrado */
+        .business-hours tr.open td {
+            background-color: #d4edda; /* Verde claro para abierto */
+            color: #155724; /* Texto oscuro para contraste */
+        }
+
+        .business-hours tr.closed td {
+            background-color: #f8d7da; /* Rojo claro para cerrado */
+            color: #721c24; /* Texto oscuro para contraste */
+        }
+
+        /* Mejoras en el formulario */
+        label {
+            font-size: 14px;
+            color: #333333;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        /* Botón "Volver arriba" */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #666666;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            display: none;
+        }
+
+        .back-to-top:hover {
+            background-color: #999999;
+        }
+
+        /* Menú hamburguesa para móviles */
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 10px;
+                border-radius: 10px;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            nav a {
+                display: none;
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+            }
+
+            nav.responsive a {
+                display: block;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            .service-card {
+                width: 100%;
+            }
+
+            iframe {
+                width: 100%;
+                height: 300px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -105,13 +208,15 @@
         El camino de la tecnología - Servicio Técnico Informático
     </header>
     <nav>
-        <img src="Sin título.png" alt="Icono">
+        <img src="Sin título.png" alt="Logo de TeknoBide" onclick="scrollToTop()">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         <a href="#nosotros"><i class="fas fa-users"></i> Nosotros</a>
         <a href="#servicios"><i class="fas fa-cogs"></i> Servicios</a>
         <a href="#localizacion"><i class="fas fa-map-marker-alt"></i> Ubicación</a>
+        <a href="#horario"><i class="fas fa-clock"></i> Horario</a>
         <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
     </nav>
-    <div class="container">
+    <main class="container">
         <section id="nosotros">
             <h2><i class="fas fa-user"></i> Quiénes Somos</h2>
             <div style="display: flex; align-items: center; gap: 20px;">
@@ -120,7 +225,7 @@
                     <p>Consulta el horario y la dirección de esta tienda.</p>
                 </div>
                 <div style="width: 40%; text-align: center;">
-                    <img src="https://source.unsplash.com/400x300/?technology,computer" alt="Equipo TeknoBide" style="border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+                    <img src="Sin título1.png" alt="Equipo TeknoBide" style="border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); max-width: 200px; height: auto;">
                 </div>
             </div>
         </section>
@@ -160,6 +265,27 @@
                 </div>
             </div>
         </section>
+        <section id="horario">
+            <h2><i class="fas fa-clock"></i> Horario de Atención</h2>
+            <table class="business-hours">
+                <thead>
+                    <tr>
+                        <th>Día</th>
+                        <th>Horario</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="horario-body">
+                    <tr><td>Lunes</td><td>11:20 - 14:00</td><td></td></tr>
+                    <tr><td>Martes</td><td>11:20 - 14:00</td><td></td></tr>
+                    <tr><td>Miércoles</td><td>11:20 - 14:00</td><td></td></tr>
+                    <tr><td>Jueves</td><td>12:15 - 14:00</td><td></td></tr>
+                    <tr><td>Viernes</td><td>11:20 - 14:00</td><td></td></tr>
+                    <tr><td>Sábado</td><td>CERRADO</td><td></td></tr>
+                    <tr><td>Domingo</td><td>CERRADO</td><td></td></tr>
+                </tbody>
+            </table>
+        </section>
         <section id="localizacion">
             <h2><i class="fas fa-map-marker-alt"></i> Ubicación</h2>
             <p><i class="fas fa-map-marker-alt"></i> Camino Arbolantxa 57, 48004 Bilbao (Bizkaia)</p>
@@ -168,27 +294,103 @@
             <p><i class="fas fa-bus"></i> BilboBus 03</p>
             <p><i class="fas fa-subway"></i> Metro L3</p>
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.521623684058!2d-2.930705223434516!3d43.2525971710966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4fd7c3c3c3c3c%3A0x3c3c3c3c3c3c3c3c!2sCamino%20Arbolantxa%2C%2057%2C%2048004%20Bilbao%2C%20Bizkaia!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" 
-                width="100%" 
-                height="300" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.521623684058!2d-2.9393800845894147!3d43.26527451634609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51abf5be888c5d%3A0x9f9e679421dd7cc2!2sTeknoBide%20Servicio%20T%C3%A9cnico!5e0!3m2!1ses!2ses!4v1676649835022!5m2!1ses!2ses" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
         <section id="contacto">
-            <h2><i class="fas fa-envelope"></i> Contacto</h2>
-            <form action="#" method="POST">
-                <input type="text" name="name" placeholder="Tu Nombre" required>
-                <input type="email" name="email" placeholder="Tu Email" required>
-                <textarea name="message" rows="4" placeholder="Tu Mensaje" required></textarea>
-                <button type="submit">Enviar Mensaje</button>
-            </form>
+            <h2><i class="fas fa-envelope"></i> Contáctanos</h2>
+            <form action="https://formspree.io/f/mqaegbkk" method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="email">Correo Electrónico:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" required></textarea>
+
+    <button type="submit">Enviar</button>
+</form>
         </section>
-    </div>
+    </main>
     <footer>
-        <p>&copy; 2025 TeknoBide | Todos los derechos reservados</p>
+        <p>© 2025 TeknoBide. Todos los derechos reservados.</p>
     </footer>
+    <div class="back-to-top" onclick="scrollToTop()">↑</div>
+    <script>
+        // Función para actualizar el horario
+        function convertirHora(hora) {
+            let partes = hora.split(':');
+            return parseInt(partes[0]) * 60 + parseInt(partes[1]);
+        }
+
+        function actualizarHorario() {
+            const horario = {
+                'Lunes': ['11:20', '14:00'],
+                'Martes': ['11:20', '14:00'],
+                'Miércoles': ['11:20', '14:00'],
+                'Jueves': ['12:15', '14:00'],
+                'Viernes': ['11:20', '14:00'],
+                'Sábado': null,
+                'Domingo': null
+            };
+
+            const diasSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+            let fecha = new Date();
+            let diaActual = diasSemana[fecha.getDay()];
+            let minutosActuales = fecha.getHours() * 60 + fecha.getMinutes();
+
+            let filas = document.querySelectorAll("#horario-body tr");
+            filas.forEach(fila => {
+                let dia = fila.cells[0].innerText;
+                let estadoCelda = fila.cells[2];
+                fila.classList.remove('open', 'closed'); // Limpia clases anteriores
+
+                if (dia === diaActual) {
+                    if (horario[dia]) {
+                        let apertura = convertirHora(horario[dia][0]);
+                        let cierre = convertirHora(horario[dia][1]);
+
+                        if (minutosActuales >= apertura && minutosActuales <= cierre) {
+                            fila.classList.add('open'); // Aplica fondo verde
+                            estadoCelda.innerText = "✔️ Abierto";
+                        } else {
+                            fila.classList.add('closed'); // Aplica fondo rojo
+                            estadoCelda.innerText = "❌ Cerrado";
+                        }
+                    } else {
+                        fila.classList.add('closed'); // Aplica fondo rojo para días cerrados
+                        estadoCelda.innerText = "❌ Cerrado";
+                    }
+                }
+            });
+        }
+
+        // Función para mostrar/ocultar el botón "Volver arriba"
+        window.onscroll = function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        };
+
+        // Función para desplazarse al principio de la página
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // Función para alternar el menú en dispositivos móviles
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('responsive');
+        }
+
+        // Inicializa y actualiza cada minuto
+        actualizarHorario();
+        setInterval(actualizarHorario, 60000);
+    </script>
 </body>
 </html>
